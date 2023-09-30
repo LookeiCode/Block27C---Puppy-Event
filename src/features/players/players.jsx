@@ -28,25 +28,32 @@ export const Players = () => {
 
   // Show the fetched data after it has arrived
   return (
+    <> 
+    <div className="PageIntro">
+    <h1>Welcome to the Puppy Bowl event!</h1>
+    <p>Come join us for a day of fun-filled puppy football!<br/>
+    Get ready to meet the talented pups competing in this years Puppy Bowl below!</p>
+    </div>
+    
     <div className="players">
-
-
       {/* Map through the data array and generate a div for each player */}
       {data.data.players.map((player) => (
-        // Use the player's ID as the key for this div
-        <div key={player.id} className="player-card">
-          < img src={player.imageUrl} alt={player.name} />
-          <div className="player-details">
 
-            <h2> {player.name} </h2>
+          <div key={player.id} className="player-card">
+            < img className="image" src={player.imageUrl} alt={player.name} />
 
-            <p> {player.breed} </p>
+            <div className="player-details">
 
-            <p> {player.status} </p>
+              <h2> {player.name} </h2>
+
+              <p> {player.breed} </p>
+
+              <p> {player.status} </p>
+            </div>
           </div>
-        </div>
       ))}
     </div>
+    </>
   );
 };
 

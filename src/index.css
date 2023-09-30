@@ -17,46 +17,60 @@ body {
   padding-left: 100px; /* The padding to the left of the text. */
 }
 
+.PageIntro {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
 /* Styling for the container that holds the player cards. */
 .players {
-   /* The player cards are displayed using flexbox. */
- /* The player cards will wrap onto the next line if there is not enough space. */
- /* The player cards are centered on the line. */
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
+
 
 /* Styling for individual player cards. */
 .player-card {
-  display: inline-block;
-  width: 100px; /* The width of the card. */
-  height: 120px; /* The height of the card. */
-  margin: 10px; /* The margin around the card. */
-   /* The background color of the card. */
-/* The border around the card. */
- /* The radius of the card's corners. */
-   /* The shadow effect around the card. */
+  max-width: auto; /* The width of the card. */
+  max-height: auto; /* The height of the card. */
+  margin: 0px; /* The margin around the card. */
+  padding: 40px;
+  background-color: blanchedalmond;
+  border: solid black;
+  border-radius: 80px;
+  box-shadow: 0px 3px 15px 10px rgba(0, 0, 0, .50);
   overflow: hidden; /* Any content that goes outside the card will be hidden. */
   position: relative; /* The card's position is set to relative so it can be moved using the transform property. */
   transition: transform 0.3s; /* Transition effect for the transform property. */
 }
+/* custom - used to round image edges */
+.image {
+  border: solid 0.5px blanchedalmond;
+  border-radius: 50px;
+}
 
 /* Styling for when a user hovers over a player card. */
 .player-card:hover {
-  /* The card moves up 5 pixels when hovered over. */
+  margin-bottom: 5px;
 }
 
 /* Styling for the container that holds the player's image. */
 .player-image-container {
- /* The image is centered. */
- /* The image is centered along the horizontal axis. */
-  /* The image is centered along the vertical axis. */
-  height: 300px; /* The height of the image container. */
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* The height of the image container. */
   padding: 10px; /* The padding around the image. */
 }
 
 /* Styling for the player's image. */
 .player-image {
-  width: 250px; /* The width of the image. */
-  height: 250px; /* The height of the image. */
+  width: 50px; /* The width of the image. */
+  height: 50px; /* The height of the image. */
   /* The image is displayed using CSS Grid. */
  /* The margin to the left of the image. */
 }
