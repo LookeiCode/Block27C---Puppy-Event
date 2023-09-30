@@ -4,6 +4,8 @@ Overview of the files in the repo:
 
 1. public/index.html: This is the HTML file that serves as the entry point of your React app. It contains a div element with the ID "root", which is where your React components get rendered.
 
+//typo here, I'm sure it means src/main.jsx
+
 2. src/index.js: This is the JavaScript entry point for your React application. It imports the main App component, and uses ReactDOM.render to render this component into the "root" div in your index.html file.
 
 3. src/App.js: This file defines the App component, which is the top-level component of your React app. It imports and renders the Players component.
